@@ -125,7 +125,7 @@ export const projects: Project[] = [
       },
       results: {
         images: ["/assets/result_image.jpg"],
-        videos: ["/assets/VeryFirstTest.MOV"],
+        videos: ["/assets/VeryFirstTest.mp4"],
         metrics: [
           { name: "Detection Accuracy", value: "95", unit: "%" },
           { name: "Processing Speed", value: "30", unit: "fps" },
