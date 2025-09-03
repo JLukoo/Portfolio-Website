@@ -180,9 +180,9 @@ export const projects: Project[] = [
       buildProcess: {
         timeline: [
           { step: "Flight Controller Engineering", description: "I coded the entire flight controller. My first microcontroller attempt failed, so I switched to a Seed Studios Raspberry Pi, which successfully managed drone flight.", images: ["/assets/RP2040.webp"] },
-          { step: "Weight and Propulsion Challenges", description: "Initial issues with incorrect propellers, heavy ESCs (~25 g each), and excessive total weight (~380 g) prevented lift. By redesigning the frame and switching to 6 g ESCs, I reduced the drone's total weight to 160 g, achieving proper thrust.", images: ["/assets/FrameV1.jpg"] },
-          { step: "Electronics Setbacks", description: "A short circuit fried the original microcontroller, requiring a complete re-engineering of the control system on a new board.", images: ["/assets/FrameV2.jpg"] },
-          { step: "Flight Stability Tuning", description: "After reducing weight, the drone became too light and overpowered. Switching from a 3-cell battery to a 2-cell battery and redesigning the frame balanced thrust and weight, enabling stable flight.", images: ["/assets/FrameV3.jpg"] }
+          { step: "Weight and Propulsion Challenges", description: "Initial issues with incorrect propellers, heavy ESCs (~25 g each), and excessive total weight (~380 g) prevented lift. By redesigning the frame and switching to 6 g ESCs, I reduced the drone's total weight to 160 g, achieving proper thrust.", images: ["/assets/FrameV1.JPG"] },
+          { step: "Electronics Setbacks", description: "A short circuit fried the original microcontroller, requiring a complete re-engineering of the control system on a new board.", images: ["/assets/FrameV2.JPG"] },
+          { step: "Flight Stability Tuning", description: "After reducing weight, the drone became too light and overpowered. Switching from a 3-cell battery to a 2-cell battery and redesigning the frame balanced thrust and weight, enabling stable flight.", images: ["/assets/FrameV3.JPG"] }
         ]
       },
       testing: {
