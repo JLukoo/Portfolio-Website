@@ -8,29 +8,22 @@ export function Footer() {
           <div className="text-center md:text-left">
             <h3 className="text-xl font-bold mb-2">Your Name</h3>
             <p className="text-muted-foreground">
-              Full-stack developer & hardware enthusiast
+              Developer and Mechanical Engineering 
             </p>
           </div>
           
           <div className="flex items-center gap-4">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/JLukoo"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-lg hover:bg-muted transition-colors"
             >
               <Github className="h-5 w-5" />
             </a>
+            
             <a
-              href="https://linkedin.com/in/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 rounded-lg hover:bg-muted transition-colors"
-            >
-              <Linkedin className="h-5 w-5" />
-            </a>
-            <a
-              href="mailto:your.email@example.com"
+              href="mailto:lijayden2020@gmail.com"
               className="p-2 rounded-lg hover:bg-muted transition-colors"
             >
               <Mail className="h-5 w-5" />
@@ -40,7 +33,7 @@ export function Footer() {
         
         <div className="border-t mt-8 pt-8 text-center">
           <p className="text-muted-foreground">
-            © {new Date().getFullYear()} Your Name. Built with Next.js, TypeScript, and TailwindCSS.
+            © {new Date().getFullYear()} Jayden Li. Built with Next.js, TypeScript, and TailwindCSS.
           </p>
         </div>
       </div>

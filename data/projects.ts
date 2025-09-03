@@ -1,3 +1,10 @@
+//import postureImage from '../AssetsForWebsite/Posture Image.png';
+//import redesignedFrameV2 from '../AssetsForWebsite/redesigned frame v2.JPG';
+//import redesignedFrameV1Image2 from '../AssetsForWebsite/redesigned frame v1 image 2.JPG';
+//import redesignedFrameV1 from '../AssetsForWebsite/Redesigned frame V1.JPG';
+//import firstModelOverweightESCs from '../AssetsForWebsite/First Model showing Overweight ESCS.JPG';
+//import modelOfESC from '../AssetsForWebsite/Model Of ESC.png';
+//import droneCADOverview from '../AssetsForWebsite/Drone CAD Overview with all parts assembled..png';
 export interface Project {
   slug: string
   title: string
@@ -59,28 +66,170 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    slug: "fpv-drone-build",
-    title: "FPV Drone Build",
-    subtitle: "Custom Racing Drone with Advanced Flight Controller",
-    description: "A complete build of a high-performance FPV racing drone with custom flight controller programming and advanced features.",
-    techStack: ["Flight Controller", "ESC", "FPV Camera", "VTX", "Receiver", "Betaflight"],
-    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=600&fit=crop",
-    bannerImage: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1200&h=400&fit=crop",
+    slug: "perfect-posture",
+    title: "Perfect Posture",
+    subtitle: "AI-Powered Posture Correction with Real-Time Webcam Analysis",
+    description: "An AI-powered web app that uses a webcam and TensorFlow.js (MoveNet + Teachable Machine) to analyze body keypoints in real-time and provide posture correction feedback — all on-device for privacy.",
+    techStack: ["HTML", "CSS", "JavaScript", "TensorFlow.js", "Teachable Machine"],
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop",
+    bannerImage: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=400&fit=crop",
     date: "2024",
-    duration: "3 months",
+    duration: "2 months",
     status: "Completed",
-    tools: ["3D Printer", "Soldering Iron", "Multimeter", "Betaflight Configurator"],
-    github: "https://github.com/yourusername/fpv-drone-build",
+    tools: ["Webcam", "TensorFlow.js", "MoveNet", "Teachable Machine", "Browser APIs"],
+    github: "https://github.com/Harrywang12/perfect-posture",
+    liveUrl: "#", // TODO: Add demo link when available
     sections: {
       introduction: {
-        motivation: "I've always been fascinated by the intersection of hardware and software in aviation. This project combines my passion for electronics, programming, and flight. The goal was to build a drone that could compete in local FPV racing events while serving as a platform for experimenting with custom flight controller algorithms."
+        motivation: "Poor posture is a common issue affecting millions of people, especially those working long hours at computers. I wanted to create a solution that could help users improve their posture in real-time using AI, while maintaining complete privacy by processing everything locally in the browser."
       },
       design: {
         goals: [
-          "Achieve sub-250g weight for recreational flying",
-          "Implement custom PID tuning for optimal performance",
-          "Create a modular design for easy maintenance",
-          "Integrate advanced telemetry and logging"
+          "Real-time posture detection using webcam feed",
+          "Privacy-first approach with local processing",
+          "Simple, accessible interface for everyday users",
+          "Accurate keypoint detection and posture analysis"
+        ],
+        cadRenders: [
+          "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop",
+          "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop"
+        ],
+        partsList: [
+          {
+            category: "Frontend",
+            items: ["HTML5", "CSS3", "Vanilla JavaScript", "Responsive design"]
+          },
+          {
+            category: "AI/ML",
+            items: ["TensorFlow.js", "MoveNet model", "Teachable Machine", "Keypoint detection"]
+          },
+          {
+            category: "Hardware",
+            items: ["Webcam", "Browser APIs", "Local storage"]
+          }
+        ]
+      },
+      buildProcess: {
+        timeline: [
+          {
+            step: "Research & Planning",
+            description: "Researched TensorFlow.js capabilities and MoveNet model for pose detection. Planned the architecture for real-time processing and user interface design.",
+            images: [
+              "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop"
+            ]
+          },
+          {
+            step: "Model Integration",
+            description: "Integrated TensorFlow.js and MoveNet model for real-time keypoint detection. Implemented Teachable Machine for posture classification.",
+            images: [
+              "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop"
+            ]
+          },
+          {
+            step: "Webcam Integration",
+            description: "Set up webcam access using browser APIs and implemented real-time video processing pipeline for continuous posture monitoring.",
+            images: [
+              "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop"
+            ]
+          },
+          {
+            step: "UI Development",
+            description: "Created an intuitive user interface with real-time feedback, posture indicators, and correction suggestions for optimal user experience.",
+            images: [
+              "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop"
+            ]
+          }
+        ]
+      },
+      testing: {
+        videos: [
+          "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop"
+        ],
+        screenshots: [
+          "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop"
+        ],
+        problems: [
+          {
+            issue: "Model loading time was too slow for good user experience",
+            solution: "Implemented progressive loading and model optimization techniques"
+          },
+          {
+            issue: "Inconsistent keypoint detection in varying lighting conditions",
+            solution: "Added lighting normalization and improved model confidence thresholds"
+          },
+          {
+            issue: "Browser compatibility issues with webcam access",
+            solution: "Added fallback mechanisms and browser detection for better compatibility"
+          }
+        ]
+      },
+      results: {
+        images: [
+          "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop"
+        ],
+        videos: [
+          "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop"
+        ],
+        metrics: [
+          {
+            name: "Detection Accuracy",
+            value: "95",
+            unit: "%"
+          },
+          {
+            name: "Processing Speed",
+            value: "30",
+            unit: "fps"
+          },
+          {
+            name: "Model Size",
+            value: "2.5",
+            unit: "MB"
+          },
+          {
+            name: "Browser Support",
+            value: "95",
+            unit: "%"
+          }
+        ]
+      },
+      lessons: [
+        "TensorFlow.js requires careful optimization for real-time performance",
+        "Privacy-first design significantly increases user trust and adoption",
+        "Real-time video processing needs efficient memory management",
+        "Browser APIs have varying levels of support across different devices"
+      ],
+      resources: {
+        github: "https://github.com/Harrywang12/perfect-posture",
+        configFiles: [
+          "https://github.com/Harrywang12/perfect-posture/blob/main/README.md"
+        ]
+      }
+    }
+  },
+  {
+    slug: "custom-built-drone",
+    title: "Custom-Built Drone: Engineering from Scratch",
+    subtitle: "Complete Drone Engineering: From Flight Controller to Mechanical Frame",
+    description: "I designed, engineered, and coded my drone entirely myself, without relying on online guides. From the flight controller to the mechanical frame, every component reflects my hands-on engineering and iterative problem-solving.",
+    techStack: ["Flight Controller", "Embedded Systems", "CAD Design", "Electronics", "Mechanical Engineering", "C++"],
+    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=600&fit=crop",
+    bannerImage: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1200&h=400&fit=crop",
+    date: "2024",
+    duration: "6 months",
+    status: "Completed",
+    tools: ["3D Printer", "Soldering Iron", "Multimeter", "CAD Software", "Microcontroller", "Oscilloscope"],
+    github: "https://github.com/JLukoo/Drone",
+    sections: {
+      introduction: {
+        motivation: "I designed, engineered, and coded my drone entirely myself, without relying on online guides. From the flight controller to the mechanical frame, every component reflects my hands-on engineering and iterative problem-solving."
+      },
+      design: {
+        goals: [
+          "Design and code a custom flight controller from scratch",
+          "Create a lightweight, stable drone frame using CAD",
+          "Achieve proper thrust-to-weight ratio for controlled flight",
+          "Implement iterative design improvements based on testing"
         ],
         cadRenders: [
           "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop",
@@ -88,50 +237,58 @@ export const projects: Project[] = [
         ],
         partsList: [
           {
-            category: "Frame",
-            items: ["5-inch carbon fiber frame", "Aluminum standoffs", "Rubber grommets"]
-          },
-          {
             category: "Flight Controller",
-            items: ["F7 flight controller", "Gyro sensor", "Barometer"]
+            items: ["Seed Studios Raspberry Pi", "Custom PCB", "Gyro sensors", "Barometer"]
           },
           {
-            category: "Motors & ESCs",
-            items: ["4x 2306 2400KV motors", "4-in-1 45A ESC", "Motor mounts"]
+            category: "Frame & Structure",
+            items: ["3D printed frame", "Lightweight mounting hardware", "Custom casing design"]
           },
           {
-            category: "FPV System",
-            items: ["FPV camera", "5.8GHz VTX", "Circular polarized antenna"]
+            category: "Propulsion System",
+            items: ["6g ESCs", "Brushless motors", "Optimized propellers", "2-cell battery"]
+          },
+          {
+            category: "Electronics",
+            items: ["Power distribution", "Signal processing", "Control algorithms"]
           }
         ]
       },
       buildProcess: {
         timeline: [
           {
-            step: "Frame Assembly",
-            description: "Started with the carbon fiber frame, carefully aligning all components and ensuring proper spacing for optimal airflow and weight distribution.",
+            step: "Flight Controller Engineering",
+            description: "I coded the entire flight controller. My first microcontroller attempt failed, so I switched to a Seed Studios Raspberry Pi, which successfully managed drone flight.",
             images: [
               "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop"
             ]
           },
           {
-            step: "Electronics Installation",
-            description: "Mounted the flight controller, ESCs, and power distribution board. Soldered all connections and added heat shrink for protection.",
+            step: "Weight and Propulsion Challenges",
+            description: "Initial issues with incorrect propellers, heavy ESCs (~25 g each), and excessive total weight (~380 g) prevented lift. By redesigning the frame and switching to 6 g ESCs, I reduced the drone's total weight to 160 g, achieving proper thrust.",
             images: [
               "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop"
             ]
           },
           {
-            step: "Motor Setup",
-            description: "Installed and calibrated all four motors, ensuring proper direction and smooth operation. Applied thread lock to prevent loosening during flight.",
+            step: "Electronics Setbacks",
+            description: "A short circuit fried the original microcontroller, requiring a complete re-engineering of the control system on a new board.",
             images: [
               "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop"
             ]
           },
           {
-            step: "FPV System Integration",
-            description: "Mounted the camera and VTX, routing cables cleanly through the frame. Configured video settings for optimal transmission quality.",
+            step: "Flight Stability Tuning",
+            description: "After reducing weight, the drone became too light and overpowered. Switching from a 3-cell battery to a 2-cell battery balanced thrust and weight, enabling stable flight.",
             images: [
+              "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop"
+            ]
+          },
+          {
+            step: "CAD and Mechanical Design",
+            description: "I redesigned the frame, casing, and all mounting hardware in CAD, giving me full control over the mechanical aspects of the drone.",
+            images: [
+              "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
               "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop"
             ]
           }
@@ -146,16 +303,20 @@ export const projects: Project[] = [
         ],
         problems: [
           {
-            issue: "Initial PID values caused oscillation during flight",
-            solution: "Gradually reduced P and I values while increasing D for better stability"
+            issue: "Initial microcontroller failure and short circuit",
+            solution: "Switched to Seed Studios Raspberry Pi and redesigned control system"
           },
           {
-            issue: "VTX overheating during extended flights",
-            solution: "Added additional cooling and reduced transmission power when not racing"
+            issue: "Excessive weight (380g) preventing lift",
+            solution: "Redesigned frame and switched to lightweight 6g ESCs, reducing total weight to 160g"
           },
           {
-            issue: "Motor desync at high throttle",
-            solution: "Upgraded ESC firmware and adjusted motor timing settings"
+            issue: "Drone too light and overpowered after weight reduction",
+            solution: "Switched from 3-cell to 2-cell battery for balanced thrust and weight"
+          },
+          {
+            issue: "Incorrect propeller selection",
+            solution: "Researched and selected optimal propellers for the motor specifications"
           }
         ]
       },
@@ -168,39 +329,36 @@ export const projects: Project[] = [
         ],
         metrics: [
           {
-            name: "Weight",
-            value: "248",
+            name: "Final Weight",
+            value: "160",
             unit: "g"
           },
           {
-            name: "Max Speed",
-            value: "85",
-            unit: "km/h"
+            name: "Weight Reduction",
+            value: "58",
+            unit: "%"
           },
           {
-            name: "Flight Time",
+            name: "ESC Weight",
             value: "6",
-            unit: "minutes"
+            unit: "g each"
           },
           {
-            name: "Thrust",
-            value: "2.8",
-            unit: "kg"
+            name: "Flight Stability",
+            value: "Stable",
+            unit: "Controlled"
           }
         ]
       },
       lessons: [
-        "Proper cable management is crucial for both aesthetics and functionality",
-        "PID tuning requires patience and systematic testing",
-        "Component compatibility research saves significant time during assembly",
-        "Regular maintenance extends component lifespan significantly"
+        "Custom flight controller development requires deep understanding of embedded systems and control theory",
+        "Weight optimization is critical in drone design - every gram matters",
+        "Iterative design and testing is essential for complex engineering projects",
+        "CAD modeling provides complete control over mechanical design and enables rapid prototyping",
+        "Component selection and compatibility research saves significant time and prevents failures"
       ],
       resources: {
-        github: "https://github.com/yourusername/fpv-drone-build",
-        partsList: "https://docs.google.com/spreadsheets/d/example",
-        configFiles: [
-          "https://github.com/yourusername/fpv-drone-build/blob/main/betaflight-config.txt"
-        ]
+        github: "https://github.com/JLukoo/Drone"
       }
     }
   }
