@@ -12,34 +12,37 @@ export function ProjectTesting({ project }: ProjectTestingProps) {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold mb-12 text-center">Testing & Iteration</h2>
           
-          {/* Videos */}
-          {project.sections.testing.videos.length > 0 && (
-            <div className="mb-16">
-              <div className="flex items-center gap-3 mb-6">
-                <Play className="h-6 w-6 text-primary" />
-                <h3 className="text-2xl font-semibold">Testing Videos</h3>
-              </div>
-              <div className="grid md:grid-cols-2 gap-6">
-                {project.sections.testing.videos.map((video, index) => (
-                  <div
-                    key={index}
-                    className="rounded-lg overflow-hidden shadow-sm border bg-muted"
-                  >
-                    <img
-                      src={video}
-                      alt={`Testing Video ${index + 1}`}
-                      className="w-full h-48 object-cover"
-                    />
-                    <div className="p-4">
-                      <p className="text-sm text-muted-foreground">
-                        Video {index + 1} - Testing footage
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
+{/* Videos */}
+{project.sections.testing.videos.length > 0 && (
+  <div className="mb-16">
+    <div className="flex items-center gap-3 mb-6">
+      <Play className="h-6 w-6 text-primary" />
+      <h3 className="text-2xl font-semibold">Testing Videos</h3>
+    </div>
+    <div className="grid md:grid-cols-2 gap-6">
+      {project.sections.testing.videos.map((video, index) => (
+        <div
+          key={index}
+          className="rounded-lg overflow-hidden shadow-sm border bg-muted"
+        >
+          <video
+            src={video}
+            controls
+            className="w-full h-48 object-cover"
+          >
+            Your browser does not support the video tag.
+          </video>
+          <div className="p-4">
+            <p className="text-sm text-muted-foreground">
+              Video {index + 1} - Testing footage
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+)}
+
 
           {/* Screenshots */}
           {project.sections.testing.screenshots.length > 0 && (
