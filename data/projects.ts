@@ -41,7 +41,7 @@ export interface Project {
     }
     results: {
       images: string[]
-      videos: string[]
+      videos: string[]   // still here for structure, but left empty
       metrics: {
         name: string
         value: string
@@ -59,12 +59,71 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: "current-project",
+    title: "Current Project",
+    subtitle: "Work in Progress",
+    description: "Currently I am partnering with the OVA(Ontario Volleyball Association) to develop a website for their organization and develop referee resources.",
+    techStack: ["Coming Soon"],
+    image: "",
+    bannerImage: "",
+    date: "2025 - Present",
+    duration: "In Progress",
+    status: "In Development",
+    tools: ["Coming Soon"],
+    github: "#",
+    liveUrl: "#",
+    sections: {
+      introduction: {
+        motivation: "This project is currently under development. More details coming soon."
+      },
+      design: {
+        cadRenders: [],
+        goals: [
+          "Project goals will be defined as development progresses"
+        ],
+        partsList: [
+          { category: "Coming Soon", items: ["Details to be added"] }
+        ]
+      },
+      buildProcess: {
+        timeline: [
+          {
+            step: "Project Planning",
+            description: "Project planning and development is currently in progress.",
+            images: []
+          }
+        ]
+      },
+      testing: {
+        videos: [],
+        screenshots: [],
+        problems: [
+          { issue: "Project in development", solution: "Solutions will be documented as they are implemented" }
+        ]
+      },
+      results: {
+        images: [],
+        videos: [],
+        metrics: [
+          { name: "Progress", value: "0", unit: "%" },
+          { name: "Status", value: "In Development", unit: "" }
+        ]
+      },
+      lessons: [
+        "Lessons learned will be documented as the project progresses"
+      ],
+      resources: {
+        github: "#"
+      }
+    }
+  },
+  {
     slug: "perfect-posture",
     title: "Perfect Posture",
     subtitle: "AI-Powered Posture Correction with Real-Time Webcam Analysis",
     description: "An AI-powered web app that uses a webcam and TensorFlow.js (MoveNet + Teachable Machine) to analyze body keypoints in real-time and provide posture correction feedback — all on-device for privacy.",
     techStack: ["HTML", "CSS", "JavaScript", "TensorFlow.js", "Teachable Machine"],
-    image: "/assets/PerfectPosture.png",
+    image: "/assets/Harrison.png",
     bannerImage: "/assets/PostureBanner.png",
     date: "2024",
     duration: "2 months",
@@ -74,7 +133,7 @@ export const projects: Project[] = [
     liveUrl: "#",
     sections: {
       introduction: {
-        motivation: "Poor posture is a common issue affecting millions of people, especially those working long hours at computers. I wanted to create a solution that could help users improve their posture in real-time using AI, while maintaining complete privacy by processing everything locally in the browser."
+        motivation: "Poor posture is a common issue affecting millions of people, especially those working long hours at computers. Me and my partner harrison wanted to create a solution that could help users improve their posture in real-time using AI, while maintaining complete privacy by processing everything locally in the browser."
       },
       design: {
         cadRenders: [],
@@ -95,28 +154,32 @@ export const projects: Project[] = [
           {
             step: "Research & Planning",
             description: "Researched TensorFlow.js capabilities and MoveNet model for pose detection. Planned the architecture for real-time processing and user interface design.",
-            images: ["https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop"]
+          images: []
+          
           },
           {
             step: "Model Integration",
             description: "Integrated TensorFlow.js and MoveNet model for real-time keypoint detection. Implemented Teachable Machine for posture classification.",
-            images: ["https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop"]
+            images: []
           },
           {
             step: "Webcam Integration",
             description: "Set up webcam access using browser APIs and implemented real-time video processing pipeline for continuous posture monitoring.",
-            images: ["https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop"]
+            images: []
+
           },
           {
             step: "UI Development",
             description: "Created an intuitive user interface with real-time feedback, posture indicators, and correction suggestions for optimal user experience.",
-            images: ["https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop"]
+            images: []
           }
         ]
       },
       testing: {
-        videos: ["/assets/VeryFirstTest.MOV"],
-        screenshots: ["https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop"],
+        videos: ["/assets/TestingVid.mp4"],
+        screenshots: [
+          "/assets/CodeSnippet.png"
+        ],
         problems: [
           { issue: "Model loading time was too slow for good user experience", solution: "Implemented progressive loading and model optimization techniques" },
           { issue: "Inconsistent keypoint detection in varying lighting conditions", solution: "Added lighting normalization and improved model confidence thresholds" },
@@ -124,12 +187,13 @@ export const projects: Project[] = [
         ]
       },
       results: {
-        images: ["/assets/result_image.jpg"],
-        videos: ["/assets/VeryFirstTest.mp4"],
+        images: [
+
+        ],
+        videos: ["/assets/DemoVideo.mp4"], 
         metrics: [
           { name: "Detection Accuracy", value: "95", unit: "%" },
           { name: "Processing Speed", value: "30", unit: "fps" },
-          { name: "Model Size", value: "2.5", unit: "MB" },
           { name: "Browser Support", value: "95", unit: "%" }
         ]
       },
@@ -141,7 +205,6 @@ export const projects: Project[] = [
       ],
       resources: {
         github: "https://github.com/Harrywang12/perfect-posture",
-        configFiles: ["/assets/config_readme.md"]
       }
     }
   },
@@ -151,8 +214,8 @@ export const projects: Project[] = [
     subtitle: "Complete Drone Engineering: From Flight Controller to Mechanical Frame",
     description: "I designed, engineered, and coded my drone entirely myself, without relying on online guides. From the flight controller to the mechanical frame, every component reflects my hands-on engineering and iterative problem-solving.",
     techStack: ["Flight Controller", "Embedded Systems", "CAD Design", "Electronics", "Mechanical Engineering", "C++"],
-    image: "/assets/DroneOverview.jpg",
-    bannerImage: "/assets/DroneBanner.jpg",
+    image: "/assets/Sky.webp",
+    bannerImage: "/assets/DroneBanner.webp",
     date: "2024",
     duration: "6 months",
     status: "Completed",
@@ -187,7 +250,9 @@ export const projects: Project[] = [
       },
       testing: {
         videos: ["/assets/VeryFirstTest.MOV"],
-        screenshots: ["/assets/DroneScreenshot.jpg"],
+        screenshots: [
+          "/assets/CodeSnippet.png"
+        ],
         problems: [
           { issue: "Initial microcontroller failure and short circuit", solution: "Switched to Seed Studios Raspberry Pi and redesigned control system" },
           { issue: "Excessive weight preventing lift", solution: "Redesigned frame and switched to lightweight 6g ESCs" },
@@ -196,8 +261,11 @@ export const projects: Project[] = [
         ]
       },
       results: {
-        images: ["/assets/DroneResult.jpg"],
-        videos: ["/assets/VeryFirstTest.MOV"],
+        images: [
+          "/assets/FinalPhoto1.jpg",
+          "/assets/FinalPhoto2.jpg"
+        ],
+        videos: [], // removed final demo video
         metrics: [
           { name: "Final Weight", value: "160", unit: "g" },
           { name: "Weight Reduction", value: "58", unit: "%" },

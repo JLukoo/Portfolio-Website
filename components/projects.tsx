@@ -6,6 +6,13 @@ import { getAllProjects } from "@/data/projects"
 
 export function Projects() {
   const projects = getAllProjects()
+  
+  // Sort projects to show current project first
+  const sortedProjects = projects.sort((a, b) => {
+    if (a.slug === "current-project") return -1
+    if (b.slug === "current-project") return 1
+    return 0
+  })
 
   return (
     <section id="projects" className="py-20">
@@ -19,14 +26,27 @@ export function Projects() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
+          {sortedProjects.map((project) => (
             <Card key={project.slug} className="group hover:shadow-lg transition-all duration-300 overflow-hidden">
               <div className="aspect-video overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
+                    <div className="text-center p-6">
+                      <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                        </svg>
+                      </div>
+                      <p className="text-sm text-muted-foreground font-medium">Documentation Coming Soon </p>
+                    </div>
+                  </div>
+                )}
               </div>
               <CardHeader>
                 <CardTitle className="text-xl">{project.title}</CardTitle>

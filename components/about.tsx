@@ -10,7 +10,7 @@ const skills = [
     category: "Backend",
     icon: Database,
     skills: ["Node.js", "Python", "PostgreSQL", "MongoDB", "REST APIs"]
-  },
+  },                  
   {
     category: "Hardware",
     icon: Cpu,
@@ -70,7 +70,7 @@ export function About() {
           <div className="relative">
             <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=600&h=600&fit=crop"
+                src="/assets/Jayden.jpg"
                 alt="Working on projects"
                 className="w-full h-full object-cover"
               />

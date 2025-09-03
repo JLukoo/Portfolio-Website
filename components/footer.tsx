@@ -6,9 +6,9 @@ export function Footer() {
       <div className="container px-4 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="text-center md:text-left">
-            <h3 className="text-xl font-bold mb-2">Your Name</h3>
+            <h3 className="text-xl font-bold mb-2">Jayden Li</h3>
             <p className="text-muted-foreground">
-              Developer and Mechanical Engineering 
+              Developer and Mechanical Engineering Enthusiast
             </p>
           </div>
           

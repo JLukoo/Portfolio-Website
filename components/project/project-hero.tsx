@@ -1,4 +1,6 @@
-import Link from "next/link"
+"use client"
+
+import { useRouter } from "next/navigation"
 import { ArrowLeft, Calendar, Clock, CheckCircle, Wrench } from "lucide-react"
 import { Button } from "../ui/button"
 import { Project } from "@/data/projects"
@@ -8,6 +10,8 @@ interface ProjectHeroProps {
 }
 
 export function ProjectHero({ project }: ProjectHeroProps) {
+  const router = useRouter()
+  
   return (
     <section className="relative">
       {/* Banner Image */}
@@ -21,13 +25,17 @@ export function ProjectHero({ project }: ProjectHeroProps) {
       </div>
 
       {/* Back Button */}
-      <div className="absolute top-6 left-6">
-        <Button variant="secondary" size="sm" asChild>
-          <Link href="/#projects">
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to Projects
-          </Link>
-        </Button>
+      <div className="absolute top-6 left-6 z-10">
+        <button 
+          onClick={() => {
+            console.log('Back button clicked, navigating to /projects')
+            window.location.href = '/projects'
+          }}
+          className="flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-md bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-colors"
+        >
+          <ArrowLeft className="h-4 w-4" />
+          Back to Projects
+        </button>
       </div>
 
       {/* Content Overlay */}

@@ -75,11 +75,13 @@ export function ProjectResults({ project }: ProjectResultsProps) {
                     key={index}
                     className="rounded-lg overflow-hidden shadow-sm border bg-muted"
                   >
-                    <img
+                    <video
                       src={video}
-                      alt={`Final Demo Video ${index + 1}`}
+                      controls
                       className="w-full h-48 object-cover"
-                    />
+                    >
+                      Your browser does not support the video tag.
+                    </video>
                     <div className="p-4">
                       <p className="text-sm text-muted-foreground">
                         Demo Video {index + 1} - Final results showcase

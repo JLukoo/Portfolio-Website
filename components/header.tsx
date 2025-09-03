@@ -7,19 +7,25 @@ import { ThemeToggle } from "./theme-toggle"
 import { Button } from "./ui/button"
 
 const navigation = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Projects", href: "#projects" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/#about" },
+  { name: "Projects", href: "/projects" },
+  { name: "Contact", href: "/#contact" },
 ]
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+  const handleNavigation = (href: string) => {
+    if (href.startsWith('#')) {
+      // Handle anchor links for home page
+      const element = document.querySelector(href)
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" })
+      }
+    } else {
+      // Handle regular navigation
+      window.location.href = href
     }
     setMobileMenuOpen(false)
   }
@@ -38,7 +44,7 @@ export function Header() {
           {navigation.map((item) => (
             <button
               key={item.name}
-              onClick={() => scrollToSection(item.href)}
+              onClick={() => handleNavigation(item.href)}
               className="text-sm font-medium transition-colors hover:text-primary"
             >
               {item.name}
@@ -71,7 +77,7 @@ export function Header() {
             {navigation.map((item) => (
               <button
                 key={item.name}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => handleNavigation(item.href)}
                 className="block w-full text-left px-3 py-2 text-base font-medium rounded-md hover:bg-accent hover:text-accent-foreground"
               >
                 {item.name}
