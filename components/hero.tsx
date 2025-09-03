@@ -19,7 +19,7 @@ export function Hero() {
           <div className="text-center max-w-4xl">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
               Hi, I'm{" "}
-              <span className="text-primary">Your Name</span>
+              <span className="text-primary">Jayden Li</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl">
               A passionate developer and maker who loves building things that matter. 

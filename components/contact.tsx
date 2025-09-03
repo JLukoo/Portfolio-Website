@@ -57,7 +57,7 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="font-semibold">Email</h4>
-                  <p className="text-muted-foreground">your.email@example.com</p>
+                  <p className="text-muted-foreground">lijayden2020@gmail.com</p>
                 </div>
               </div>
               
@@ -67,7 +67,7 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="font-semibold">Phone</h4>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                  <p className="text-muted-foreground">+1 (647) 562-8366</p>
                 </div>
               </div>
               
@@ -77,7 +77,7 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="font-semibold">Location</h4>
-                  <p className="text-muted-foreground">San Francisco, CA</p>
+                  <p className="text-muted-foreground">Mississauga, ON</p>
                 </div>
               </div>
             </div>
@@ -87,19 +87,19 @@ export function Contact() {
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-muted-foreground">Full-time opportunities</span>
+                  <span className="text-muted-foreground">Internships/Development Opportunities</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-muted-foreground">Freelance projects</span>
+                    <span className="text-muted-foreground">Freelance Projects</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-muted-foreground">Open source contributions</span>
+                  <span className="text-muted-foreground">Open source Contribution</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-muted-foreground">Technical consulting</span>
+                  <span className="text-muted-foreground">Robotics</span>
                 </div>
               </div>
             </div>
@@ -121,7 +121,7 @@ export function Contact() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="Your name"
+                    placeholder="Jayden Li"
                   />
                 </div>
                 <div>
@@ -135,7 +135,7 @@ export function Contact() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="your.email@example.com"
+                    placeholder="lijayden2020@gmail.com"
                   />
                 </div>
               </div>
